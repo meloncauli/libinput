@@ -393,6 +393,9 @@ tp_gesture_handle_state_scroll(struct tp_dispatch *tp, uint64_t time)
 	/* scroll is not accelerated */
 	delta = tp_filter_motion_unaccelerated(tp, &raw, time);
 
+	delta.x /= 3;
+	delta.y /= 3;
+
 	if (normalized_is_zero(delta))
 		return GESTURE_STATE_SCROLL;
 
