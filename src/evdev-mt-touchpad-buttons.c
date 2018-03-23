@@ -711,7 +711,7 @@ tp_click_get_default_method(struct tp_dispatch *tp)
 	else if (libevdev_get_id_vendor(tp->device->evdev) == VENDOR_ID_APPLE)
 		return LIBINPUT_CONFIG_CLICK_METHOD_CLICKFINGER;
 
-	return LIBINPUT_CONFIG_CLICK_METHOD_BUTTON_AREAS;
+	return LIBINPUT_CONFIG_CLICK_METHOD_CLICKFINGER;
 }
 
 static enum libinput_config_click_method
